@@ -28,6 +28,8 @@ function M.to(direction)
             nvim.wincmd(direction, vim.v.count)
         end
     end
+
+    vim.o.laststatus = vim.o.laststatus -- reset statusline as it sometimes disappear (#105)
 end
 
 return M
